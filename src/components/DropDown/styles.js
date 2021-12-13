@@ -5,8 +5,9 @@ export const useStyles = makeStyles({
 		backgroundColor: "#fff",
 		border: "1px solid #0885DF",
 		borderRadius: 5,
+		marginLeft: 15,
+		width: 300,
 		paddingTop: 8,
-
 		paddingBottom: 8,
 		display: "flex",
 		justifyContent: "space-evenly",

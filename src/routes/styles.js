@@ -7,4 +7,8 @@ export const useStyles = makeStyles({
 		height: "100%",
 		padding: 30,
 	},
+
+	icon: {
+		marginRight: 20,
+	},
 });

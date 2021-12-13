@@ -11,10 +11,11 @@ import {
 
 import { ReactComponent as GreenSvg } from "../../assets/green.svg";
 import { ReactComponent as RedSvg } from "../../assets/red.svg";
+
 import { useStyles } from "./styles";
 
-import { Pending, Successful } from "../../components/Status/index";
-import { InviteButton } from "../Buttons/index";
+import Status from "../Status/index";
+import CustomButton from "../CustomButton/index";
 
 const DataTable = ({ datas, tableHeader }) => {
 	const classes = useStyles();
@@ -80,11 +81,11 @@ const DataTable = ({ datas, tableHeader }) => {
 									<Grid item>{data.assignTo}</Grid>
 									<Grid item>
 										{data.status === "invite" ? (
-											<InviteButton />
+											<CustomButton type="invite" customType="Button" />
 										) : data.status === "successful" ? (
-											<Successful />
+											<Status type="successful" customType="Status" />
 										) : data.status === "pending" ? (
-											<Pending />
+											<Status type="pending" customType="Status" />
 										) : (
 											""
 										)}

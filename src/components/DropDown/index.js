@@ -7,7 +7,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 const DropDown = ({ sortBy, handleChangeSort }) => {
 	const classes = useStyles();
 	return (
-		<Grid item xs={6} className={classes.sortBy}>
+		<Grid item xs={4} className={classes.sortBy}>
 			<div className={classes.marginRight}>
 				<span className={classes.name}>Sort by : </span>
 			</div>

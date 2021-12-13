@@ -4,14 +4,10 @@ import { tableHeader } from "../../datas/tableHeader";
 import DataTable from "../../components/DataTable";
 import { Grid } from "@material-ui/core";
 import CustomButton from "../../components/CustomButton/index";
-import AddOutlinedIcon from "@material-ui/icons/AddOutlined";
-import { ReactComponent as DesignationSvg } from "../../assets/designation.svg";
 
 import DropDown from "../../components/DropDown/index";
-import { useStyles } from "./styles";
 
 const Employees = () => {
-	const classes = useStyles();
 	const sortBy = [
 		{
 			name: "Name",
@@ -66,29 +62,25 @@ const Employees = () => {
 
 	return (
 		<Grid container>
-			<Grid container item justifyContent="space-between">
-				<Grid container item xs={3} alignItems="center">
-					<CustomButton
-						type="outlined"
-						label="Add a new user"
-						endIcon={<AddOutlinedIcon />}
-						style={classes.btnAdd}
-					/>
-					<CustomButton type="text" label="Role" style={classes.btnRole} />
+			<Grid container xs={12} item justifyContent="space-between">
+				<Grid
+					container
+					item
+					xs={6}
+					alignItems="center"
+					justifyContent="flex-start"
+				>
+					<CustomButton type="add a new user" />
+					<CustomButton type="role" />
 				</Grid>
 				<Grid
 					container
 					item
-					xs={4}
-					justifyContent="space-between"
+					xs={6}
+					justifyContent="flex-end"
 					alignItems="center"
 				>
-					<CustomButton
-						type="outlined"
-						label="Designation"
-						startIcon={<DesignationSvg />}
-						style={classes.btnDesignation}
-					/>
+					<CustomButton type="designation" />
 					<DropDown sortBy={sortBy} handleChangeSort={handleChangeSort} />
 				</Grid>
 			</Grid>

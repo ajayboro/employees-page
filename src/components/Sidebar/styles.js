@@ -4,8 +4,13 @@ export const useStyles = makeStyles({
 	gridContainer: {
 		backgroundColor: "#14213D",
 		borderRadius: 10,
-		padding: "50px 20px",
+		padding: "50px 4px",
 		height: 850,
+	},
+
+	navContainer: {
+		display: "flex",
+		justifyContent: "space-between",
 	},
 
 	icon: {
@@ -13,11 +18,22 @@ export const useStyles = makeStyles({
 	},
 
 	navLink: {
-		marginBottom: 8,
+		marginTop: 3,
+		marginBottom: 3,
 		textDecoration: "none",
 		color: "#fff",
 		padding: 18,
+		marginLeft: 16,
+		marginRight: 16,
 		fontWeight: 600,
+		width: "85%",
+	},
+
+	divLink: {
+		marginTop: 6,
+		marginBottom: 6,
+		color: "#fff",
+		padding: "18px 0px 18px 8px",
 	},
 
 	activeNavLink: {
