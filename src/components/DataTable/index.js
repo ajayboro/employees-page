@@ -12,6 +12,10 @@ import {
 import { ReactComponent as GreenSvg } from "../../assets/green.svg";
 import { ReactComponent as RedSvg } from "../../assets/red.svg";
 
+import { ReactComponent as PendingSvg } from "../../assets/pending.svg";
+import { ReactComponent as SuccessfulSvg } from "../../assets/successful.svg";
+import { ReactComponent as ArrowUpSvg } from "../../assets/arrowUp.svg";
+
 import { useStyles } from "./styles";
 
 import Status from "../Status/index";
@@ -58,6 +62,7 @@ const DataTable = ({ datas, tableHeader }) => {
 							}}
 						>
 							<TableCell>
+								{/* task: extract the status */}
 								{data.status === "invite" ? (
 									<GreenSvg className={classes.status} />
 								) : data.status === "successful" ? (
@@ -81,11 +86,24 @@ const DataTable = ({ datas, tableHeader }) => {
 									<Grid item>{data.assignTo}</Grid>
 									<Grid item>
 										{data.status === "invite" ? (
-											<CustomButton type="invite" customType="Button" />
+											<CustomButton
+												type="contained"
+												label="Send Invite"
+												endIcon={<ArrowUpSvg />}
+												style={classes.btnInvite}
+											/>
 										) : data.status === "successful" ? (
-											<Status type="successful" customType="Status" />
+											<Status
+												label="Successful"
+												icon={<SuccessfulSvg className={classes.iconSvg} />}
+												style={classes.successful}
+											/>
 										) : data.status === "pending" ? (
-											<Status type="pending" customType="Status" />
+											<Status
+												label="Pending"
+												icon={<PendingSvg className={classes.iconSvg} />}
+												style={classes.pending}
+											/>
 										) : (
 											""
 										)}

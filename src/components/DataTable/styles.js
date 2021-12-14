@@ -37,4 +37,38 @@ export const useStyles = makeStyles({
 	status: {
 		marginRight: 20,
 	},
+
+	pending: {
+		backgroundColor: "#E38630",
+		width: 130,
+		height: 35,
+		borderRadius: 17,
+		color: "#fff",
+		textTransform: "capitalize",
+	},
+
+	successful: {
+		backgroundColor: "#34E330",
+		width: 130,
+		height: 35,
+		borderRadius: 17,
+		color: "#fff",
+		textTransform: "capitalize",
+	},
+
+	btnInvite: {
+		backgroundColor: "#0885DF",
+		borderRadius: 17,
+		boxShadow: "none",
+		color: "#fff",
+		textTransform: "capitalize",
+		"&:hover": {
+			color: "#14213D",
+			boxShadow: "none",
+		},
+	},
+
+	iconSvg: {
+		marginTop: 5,
+	},
 });

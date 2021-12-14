@@ -6,7 +6,7 @@ export const useStyles = makeStyles({
 		border: "1px solid #0885DF",
 		borderRadius: 5,
 		marginLeft: 15,
-		width: 300,
+		minWidth: 200,
 		paddingTop: 8,
 		paddingBottom: 8,
 		display: "flex",
